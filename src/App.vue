@@ -1,17 +1,44 @@
 <template>
   <div id="app">
-    <Recommend />
+    <Recommend :msg="msg" :urls="urls" />
   </div>
 </template>
 
 <script>
-import Recommend from "@/components/Recommend";
+import Recommend from '@/components/Recommend';
 
 export default {
-  name: "App",
+  name: 'App',
+  data() {
+    return {
+      urls: [
+        {
+          name: 'Vk',
+          img: '/Vk.svg',
+          src: 'https://vk.com/share.php?url=http://mysite.com',
+        },
+        {
+          name: 'Ok',
+          img: '/Ok1.svg',
+          src: 'https://connect.ok.ru/offer?url=http://mysite.com',
+        },
+        {
+          name: 'Twit',
+          img: '/Twit.svg',
+          src: 'https://vk.com/share.php?url=http://mysite.com',
+        },
+        {
+          name: 'Fb',
+          img: '/F.svg',
+          src: 'https://vk.com/share.php?url=http://mysite.com',
+        },
+      ],
+      msg: 'Hi',
+    };
+  },
   components: {
-    Recommend
-  }
+    Recommend,
+  },
 };
 </script>
 
